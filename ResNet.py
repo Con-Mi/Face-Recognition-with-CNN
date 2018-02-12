@@ -21,7 +21,7 @@ class ResidualNet(nn.Module):
 	def forward(self, x):
 		# Feature extraction
 		x = self.pool(F.relu(self.conv2(self.conv2(x))))
-		x = slef.pool(F.relu(self.conv4(self.conv1(x))))
+		x = self.pool(F.relu(self.conv4(self.conv3(x))))
 		
 		# Classification
 		x = x.view()
